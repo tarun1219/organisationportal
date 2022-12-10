@@ -17,7 +17,7 @@ const [data,setData]=useState([{}])
 useEffect(()=>
 {
     const fetchData = async () => {
-    const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
+    const res = await fetch("http://cors.io/?http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
     const data = await res.text();
     return data;
   }
