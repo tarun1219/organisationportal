@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutMe from "./components/AboutMe";
+import Analytics from "./components/Analytics";
+import SystemInbox from "./components/SystemInbox";
+import styled from "styled-components";
+import Login from "./pages/Login";
+import SideBar from "./components/SideBar";
+import EmailCard from "./pages/EmailCard";
+import SpamEmailPage from "./pages/SpamEmailPage";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+    <Routes>
+    <Route exact path="/login" element={<Login />} />
+    </Routes>
+    <SideBar>
+    <Routes>
+        <Route exact path="/aboutme" element={<AboutMe />} />
+        <Route exact path="/analytics" element={<Analytics />} />
+        <Route exact path="/inbox" element={<SystemInbox />} />
+        <Route exact path="/email" element={<EmailCard />} />
+        <Route exact path="/spam" element={<SpamEmailPage/>}/>
+        <Route exact path="/" element={<HomePage />} />
+      </Routes>
+    </SideBar>
+    </BrowserRouter>
   );
 }
-
-export default App;
+const Container = styled.div``;
