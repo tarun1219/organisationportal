@@ -10,9 +10,9 @@ useEffect(()=>
 {
     const fetchData = async () => {
     
-    const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/blockedEmail");
+    //const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/blockedEmail");
     const fetched_data = blockedEmailData();
-    const data = await res.text();
+    //const data = await res.text();
     return fetched_data;
   }
   
