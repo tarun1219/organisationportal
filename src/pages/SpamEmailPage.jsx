@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
+import OrgEmailData from '../assets/OrgEmailData';
 import EmailCard from './EmailCard';
 function SpamEmailPage() {
   const path="/email";
@@ -18,9 +19,10 @@ const [data,setData]=useState([{}])
 useEffect(()=>
 {
     const fetchData = async () => {
-    const res = await fetch("http://cors.io/?http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/orgEmails");
-    const data = await res.text();
-    return data;
+    const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/orgEmails");
+    const fetched_data = OrgEmailData();
+    const data=await res.text()
+    return fetched_data;
   }
   
   fetchData().then(

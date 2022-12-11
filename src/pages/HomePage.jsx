@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
+import blockedEmailData from '../assets/AttackData';
 import EmailCard from './EmailCard';
 function HomePage() {
   const path="/email";
@@ -8,9 +9,11 @@ const [data,setData]=useState([{}])
 useEffect(()=>
 {
     const fetchData = async () => {
+    
     const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/blockedEmail");
+    const fetched_data = blockedEmailData();
     const data = await res.text();
-    return data;
+    return fetched_data;
   }
   
   fetchData().then(

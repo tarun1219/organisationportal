@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import SpamEmailPage from '../pages/SpamEmailPage';
 import styled from "styled-components";
+import AnalyticsData from '../assets/AnalyticsData';
 function Analytics() {
   
 const [data,setData]=useState([{}])
@@ -17,9 +18,10 @@ const [data,setData]=useState([{}])
 useEffect(()=>
 {
     const fetchData = async () => {
-    const res = await fetch("http://cors.io/?http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
+    const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
+    const fetched_data = AnalyticsData();
     const data = await res.text();
-    return data;
+    return fetched_data;
   }
   
   fetchData().then(
