@@ -18,9 +18,9 @@ const [data,setData]=useState([{}])
 useEffect(()=>
 {
     const fetchData = async () => {
-    const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
+    //const res = await fetch("http://ec2-34-200-79-166.compute-1.amazonaws.com:5000/honeytoken");
     const fetched_data = AnalyticsData();
-    const data = await res.text();
+    //const data = await res.text();
     return fetched_data;
   }
   
