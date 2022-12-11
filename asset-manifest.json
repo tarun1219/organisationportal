@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/organisationportal/static/css/main.a80fab3b.css",
-    "main.js": "/organisationportal/static/js/main.bc86df01.js",
+    "main.js": "/organisationportal/static/js/main.7872430a.js",
     "static/media/HomePage.png": "/organisationportal/static/media/HomePage.42db74508b0085e5a7b3.png",
     "index.html": "/organisationportal/index.html",
     "main.a80fab3b.css.map": "/organisationportal/static/css/main.a80fab3b.css.map",
-    "main.bc86df01.js.map": "/organisationportal/static/js/main.bc86df01.js.map"
+    "main.7872430a.js.map": "/organisationportal/static/js/main.7872430a.js.map"
   },
   "entrypoints": [
     "static/css/main.a80fab3b.css",
-    "static/js/main.bc86df01.js"
+    "static/js/main.7872430a.js"
   ]
 }
